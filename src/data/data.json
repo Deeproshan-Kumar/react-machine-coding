@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "file-explorer",
+    "isFolder": true,
+    "children": [
+      {
+        "id": 2,
+        "name": "public",
+        "isFolder": true,
+        "children": [
+          {
+            "id": 3,
+            "name": "vite.svg",
+            "idFolder": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "src",
+        "isFolder": true,
+        "children": [
+          {
+            "id": 5,
+            "name": "assets",
+            "isFolder": true,
+            "children": [
+              {
+                "id": 6,
+                "name": "react.svg",
+                "isFolder": false
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "components",
+            "isFolder": true,
+            "children": [
+              {
+                "id": "8",
+                "name": "FileExplorer.jsx",
+                "isFolder": false
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "name": "data",
+            "isFolder": true,
+            "children": [
+              {
+                "id": 10,
+                "name": "data.json",
+                "isFolder": false
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "name": "App.css",
+            "isFolder": false
+          },
+          {
+            "id": 12,
+            "name": "App.jsx",
+            "isFolder": false
+          },
+          {
+            "id": 13,
+            "name": "index.css",
+            "isFolder": false
+          },
+          {
+            "id": 14,
+            "name": "main.jsx",
+            "isFolder": false
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": ".gitignore",
+        "isFolder": false
+      },
+      {
+        "id": 16,
+        "name": ".eslint.config.js",
+        "isFolder": false
+      },
+      {
+        "id": 17,
+        "name": "index.html",
+        "isFolder": false
+      },
+      {
+        "id": 18,
+        "name": "package-lock.json",
+        "isFolder": false
+      },
+      {
+        "id": 19,
+        "name": "package.json",
+        "isFolder": false
+      },
+      {
+        "id": 20,
+        "name": "README.md",
+        "isFolder": false
+      },
+      {
+        "id": 21,
+        "name": "vite.config.js",
+        "isFolder": false
+      }
+    ]
+  }
+]
