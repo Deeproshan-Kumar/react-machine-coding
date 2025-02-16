@@ -19,17 +19,8 @@
   padding-left: 2rem;
 }
 
-.node {
-  transition: 300ms all ease-in-out;
-}
-
-.node span {
-  display: block;
-  padding: 0.4rem;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #00e1ff;
-  transition: 200ms all ease-in-out;
+details {
+  width: 100%;
 }
 
 summary {
@@ -37,12 +28,14 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0.5rem 1rem;
+  padding-left: 2rem;
+  color: var(--text-clr);
   cursor: pointer;
   transition: 100ms all ease-in-out;
 }
 
-.node > span:hover,
+.file:hover,
 summary:hover {
   transition: 0s;
   background-color: #00ffff3a;
@@ -51,7 +44,6 @@ summary:hover {
 summary::before {
   content: "";
   position: absolute;
-  top: 1rem;
   left: 1rem;
   height: 0.7rem;
   width: 0.7rem;
@@ -67,19 +59,38 @@ details[open] > summary::before {
   transform: rotate(135deg);
 }
 
-summary button {
+.file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-clr);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.file > div {
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button {
   background: transparent;
   border: 0;
   cursor: pointer;
   padding: 0;
-  padding-left: 0.5rem;
   opacity: 0;
   color: var(--clr);
   font-size: 1.6rem;
   transition: all 200ms ease-in;
 }
 
-summary:hover button {
+.file:hover .button,
+summary:hover .button {
   opacity: 1;
 }
 

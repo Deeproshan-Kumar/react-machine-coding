@@ -17,12 +17,12 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
                     {node?.isFolder ? "📁" : "📄"}
                     {node?.name}
                   </span>
-                  <div>
+                  <div className="actions">
                     <button
                       className="button"
                       title="New File"
                       onClick={() => addNewFile(node?.id)}
-                      style={{"--clr": "#ffffff"}}
+                      style={{ "--clr": "#ffffff" }}
                     >
                       <FaFileCirclePlus />
                     </button>
@@ -30,7 +30,7 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
                       className="button"
                       title="New Folder"
                       onClick={() => addNewFolder(node?.id)}
-                      style={{"--clr": "#ffd900"}}
+                      style={{ "--clr": "#ffd900" }}
                     >
                       <MdCreateNewFolder />
                     </button>
@@ -38,7 +38,7 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
                       className="button"
                       title="Delete"
                       onClick={() => deleteItem(node?.id)}
-                      style={{"--clr": "#ff0000"}}
+                      style={{ "--clr": "#ff0000" }}
                     >
                       <MdDelete />
                     </button>
@@ -54,11 +54,20 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
                 )}
               </details>
             ) : (
-              <>
-                <span>
+              <div className="file">
+                <div>
                   {node?.isFolder ? "📁" : "📄"}
                   {node?.name}
-                </span>
+                </div>
+                <button
+                  className="button"
+                  title="Delete"
+                  onClick={() => deleteItem(node?.id)}
+                  style={{ "--clr": "#ff0000" }}
+                >
+                  <MdDelete />
+                </button>
+
                 {node?.children && (
                   <Explorer
                     list={node?.children}
@@ -67,7 +76,7 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
                     deleteItem={deleteItem}
                   />
                 )}
-              </>
+              </div>
             )}
           </div>
         );
@@ -79,7 +88,7 @@ const Explorer = ({ list, addNewFolder, addNewFile, deleteItem }) => {
 const FileExplorer = () => {
   const [data, setData] = useState(record);
   const addNewFolder = (parentId) => {
-    const folderName = prompt("Enter file/folder name");
+    const folderName = prompt("Enter folder name");
     const updateFolderTree = (list) => {
       return list.map((node) => {
         if (node.id === parentId) {
